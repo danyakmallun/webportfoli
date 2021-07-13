@@ -1,0 +1,100 @@
+@media only screen and (min-width: 768px) {
+
+    #mobile-open-nav,
+    #mobile-close-nav {
+        display: none;
+    }
+
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 400px auto;
+        justify-content: unset;
+    }
+
+    .navbar {
+        display: flex;
+        position: unset;
+        padding: auto;
+
+        nav {
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            background: none;
+            position: unset;
+            height: auto;
+            padding: 0;
+            margin-left: 2em;
+
+            ul.nav-kiri-utama {}
+
+            ul.nav-kanan-cadangan {
+                right: 0;
+                position: absolute;
+            }
+
+            .gabung-sekarang a {
+                padding: .8em;
+                border: 3px solid #006bd6;
+                color: #006bd6;
+                border-radius: 5em;
+                margin-top: -1em;
+
+                &:hover {
+                    background-color: #006bd6;
+                    color: white;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+        }
+
+        nav a {
+            margin-top: -2em;
+            color: black;
+            font-size: 1em;
+            padding: 1em 1em;
+            display: inline-block;
+
+            &:hover {
+                background-color: #006bd6;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+
+    section {
+        padding: 20em 8em;
+    }
+
+    .hero,
+    .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .kolom-kiri {
+        margin: 3em 3em 0em 5em;
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .hero-kolom-kiri {
+            text-align: center;
+        }
+    }
+
+    .kolom-kanan {
+        width: 30%;
+        margin-right: 8em;
+    }
+}

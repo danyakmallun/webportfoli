@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: poppins;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: white;
+    padding: 2em;
+
+    .logo {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+
+        span {
+            color: #007af3;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        place-content: space-between;
+    }
+
+    #mobile-open-nav {
+        cursor: pointer;
+    }
+}
+
+a {
+    color: #ff0000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+.hero {
+    text-align: center;
+}
+
+.kolom-kiri {
+    .subhead {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: gray;
+        letter-spacing: .3em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.3em;
+        margin-top: .2em;
+    }
+
+    .gambar-utama {
+        background: #007af3;
+        color: white;
+        text-decoration: none;
+        padding: .9em 1.3em;
+        border-radius: 5em;
+        display: inline-block;
+    }
+
+    .kunjungi-youtube {
+        display: block;
+        margin-top: 1em;
+        text-decoration: none;
+
+        i {
+            margin-right: .5em;
+
+        }
+    }
+}
+
+.hero-youtube {
+    width: 65%;
+    margin-top: 3em;
+}
+
+section.fiture-section {
+    background: #20272e;
+    color: white;
+}
+
+ul.fiture-list {
+    margin: 0;
+    padding-left: .1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
+    li {
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        margin-left: 2em;
+        position: relative;
+
+        &::before {
+            content: '';
+            left: -2em;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('../images/ceklis.png');
+            background-size: contain;
+            margin-right: .5em;
+        }
+    }
+
+}
+
+.fiture-section img {
+    display: none;
+
+}
+
+.tetimoni {
+    background: #007af3;
+    color: white;
+
+    cite a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    li {
+
+        background: #006bd6;
+        text-align: center;
+        padding: 2em 1em;
+        margin: 0 auto 5em auto;
+        width: 80%;
+        border-radius: 1em;
+
+        img {
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            border: 5px solid #006bd6;
+            margin-top: -45em;
+        }
+    }
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: .8em;
+    box-sizing: border-box;
+    border-radius: .3em;
+    border: 1px solid gray;
+    margin-bottom: 1em;
+}
+
+iframe {
+    width: 100%;
+    border-radius: .8em;
+    height: 300px;
+}
+
+input[type="submit"] {
+    font-size: 16px;
+    background: #006bd6;
+    border-radius: 5em;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+}
+
+nav.menu-btn {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 60%;
+    left: 0;
+    top: 0;
+    background: rgba(245, 245, 245, .9);
+    height: 100vh;
+    box-sizing: border-box;
+
+    ul.nav-kiri-utama {
+        margin-top: .1em;
+        margin-top: 60px;
+    }
+
+    li {
+
+        a {
+            text-decoration: none;
+            position: relative;
+            color: gray;
+            display: block;
+            left: 0;
+            padding: 30px;
+            font-size: 18px;
+            border-radius: .5em;
+            transition: .3s;
+
+            &:hover {
+                background-color: grey;
+                color: whitesmoke;
+                border-radius: .5em;
+            }
+        }
+
+
+    }
+
+    i {
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        padding: 20px;
+        position: absolute;
+        border-radius: .5em;
+        transition: .3s;
+
+        &:hover {
+            background: grey;
+            color: whitesmoke;
+            border-radius: .5em;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    #mobile-open-nav,
+    #mobile-close-nav {
+        display: none;
+    }
+
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+
+    .navbar nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        background: none;
+        position: unset;
+        height: auto;
+        padding: 0;
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            color: black;
+            font-size: 1em;
+            padding: .1em 1em;
+
+            &:hover {
+                background: #006bd6;
+                border-radius: 5em;
+            }
+
+        }
+
+        ul.nav-kiri-utama {
+            margin: 0;
+
+            .current a {
+                font-weight: bold;
+            }
+        }
+
+        ul li.gabung-sekarang a {
+            border: 3px solid #006bd6;
+            border-radius: 5em;
+            color: #006bd6;
+            margin-top: -2px;
+
+            &:hover {
+                background-color: #006bd6;
+                border-radius: 5em;
+                color: white;
+            }
+        }
+
+
+    }
+
+    footer.copy-right p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10em 4em;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+
+        .kolom-kiri {
+            margin: 3em 3em 0 5em;
+
+            h1 {
+                font-size: 3em;
+                width: 90%;
+            }
+        }
+
+        .kolom-kanan img {
+            width: 50%;
+            margin-left: 8em;
+        }
+
+        .kunjungi-youtube {
+            font-size: 20px;
+            padding-left: 2em;
+        }
+
+        .hero-kolom-kiri {
+            display: flex;
+        }
+
+
+    }
+
+    ul.fiture-list {
+        display: block;
+        margin-left: 5em;
+
+        li {
+            font-size: 1em;
+
+            &:before {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .fiture-section {
+        position: relative;
+
+        // img {
+        //     display: block;
+        //     right: 0;
+        //     width: 200px;
+        //     top: -110px;
+        //     position: absolute;
+        // }
+    }
+
+    .tetimoni ul {
+        display: flex;
+
+        li {
+            margin: 0 1em;
+        }
+    }
+
+    .contac-section {
+        position: relative;
+
+
+        .container {
+            display: flex;
+        }
+
+        .contac-left {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contac-right {
+            margin-left: 5em;
+            width: 100%;
+            height: 100%;
+            margin-top: 6.5em;
+            box-sizing: border-box;
+        }
+    }
+
+    footer.copy-right p {
+        font-size: 16px;
+    }
+}
+
+footer {
+    padding: 2em 1em;
+    background: #20272e;
+
+
+    p {
+        text-align: center;
+        color: white;
+        font-style: italic;
+        font-size: 12px;
+    }
+}
